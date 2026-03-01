@@ -3,16 +3,17 @@
 #include <string>
 
 struct Request {
-    int requestID;
-    static int nextID;
-    std::string ipIn;
-    std::string ipOut;
-    int processTime;
-    char jobType;
+    public:
+        int requestID;
+        static int nextID;
+        std::string ipIn;
+        std::string ipOut;
+        int processTime;
+        char jobType;
 
-    Request();
+        Request();
 
-    Request(std::string ipIn, std::string ipOut, int processTime, char jobType);
+        Request(std::string ipIn, std::string ipOut, int processTime, char jobType);
 };
 
 std::string genRandomIP();

@@ -4,15 +4,16 @@
 #include <queue>
 
 class RequestQueue {
-    std::queue<Request> queue;
-    
-    void enqueue(Request request);
+    public:
+        std::queue<Request> queue;
+        
+        void enqueue(Request request);
 
-    Request dequeue();
+        Request dequeue();
 
-    int size();
+        int size();
 
-    bool isEmpty();
+        bool isEmpty();
 };
 
 #endif

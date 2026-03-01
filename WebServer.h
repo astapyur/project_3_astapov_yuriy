@@ -4,22 +4,23 @@
 #include "Request.h"
 
 class WebServer {
-    int id;
-    bool busy;
-    Request currRequest;
-    int timeRemaining;
+    public:
+        int id;
+        bool busy;
+        Request currRequest;
+        int timeRemaining;
 
-    WebServer(int id);
+        WebServer(int id);
 
-    void assignRequest(Request request);
+        void assignRequest(Request request);
 
-    void increaseTime();
+        void increaseTime();
 
-    bool isBusy();
+        bool isBusy();
 
-    int getId();
+        int getId();
 
-    Request getCurrRequest();
+        Request getCurrRequest();
 };
 
 #endif
