@@ -1,3 +1,7 @@
+/**
+ * @file Request.cpp
+ * @brief Implements the Request struct and random generation functions.
+ */
 #include "Request.h"
 #include <cstdlib>
 #include <ctime>

@@ -1,3 +1,10 @@
+/**
+ * @file main.cpp
+ * @brief Driver program for the load balancer simulation.
+ *
+ * Reads configuration from config.txt, gets user input for
+ * number of servers and run time, then runs the simulation.
+ */
 #include "LoadBalancer.h"
 #include <iostream>
 #include <fstream>

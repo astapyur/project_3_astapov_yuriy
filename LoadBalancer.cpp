@@ -1,3 +1,7 @@
+/**
+ * @file LoadBalancer.cpp
+ * @brief Implements the LoadBalancer class.
+ */
 #include "LoadBalancer.h"
 #include <iostream>
 #include <cstdlib>
@@ -141,7 +145,7 @@ void LoadBalancer::adjustServers() {
 }
 
 void LoadBalancer::addRandomRequests() {
-    if (rand() % 5 == 0) {
+    if (rand() % 10 == 0) {
         Request req = genRandomRequest();
         if (isBlocked(req.ipIn) || isBlocked(req.ipOut)) {
             requestsBlocked++;
