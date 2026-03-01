@@ -1,3 +1,7 @@
+/**
+ * @file RequestQueue.cpp
+ * @brief Implements the RequestQueue class methods.
+ */
 #include "RequestQueue.h"
 
 void RequestQueue::enqueue(Request request) {
