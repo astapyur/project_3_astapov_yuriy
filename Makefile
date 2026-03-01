@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Werror
+CXXFLAGS = -std=c++17 -Wall
 TARGET = main
 SRCS = main.cpp Request.cpp RequestQueue.cpp WebServer.cpp LoadBalancer.cpp
 OBJS = $(SRCS:.cpp=.o)

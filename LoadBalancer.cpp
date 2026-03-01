@@ -1,6 +1,7 @@
 #include "LoadBalancer.h"
 #include <iostream>
 #include <cstdlib>
+#include <cstdio> //for sscanf
 
 #define RESET   "\033[0m"
 #define RED "\033[31m"      //blocked range, removed server
@@ -201,7 +202,7 @@ void LoadBalancer::printSummary() {
     summary += "Servers removed during run: " + std::to_string(serversRemoved) + "\n";
     summary += "======================\n";
 
-    std::cout << GREEN << summary << std::endl;
+    std::cout << GREEN << summary << RESET << std::endl;
     if (logFile.is_open()) {
         logFile << summary << std::endl;
     }

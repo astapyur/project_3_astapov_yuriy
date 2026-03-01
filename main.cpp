@@ -46,7 +46,7 @@ int main() {
         lb.setBlockedRange(blockedStart, blockedEnd);
     }
 
-    lb.initializeQueue(numServers * 10);
+    lb.initializeQueue(numServers * 100);
     lb.run();
 
     return 0;
