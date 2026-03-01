@@ -29,7 +29,7 @@ LoadBalancer::LoadBalancer(int numServers, int totalTime, int cooldown) {
 }
 
 LoadBalancer::~LoadBalancer() {
-    for (int i = 0; i < servers.size(); i++) {
+    for (long unsigned int i = 0; i < servers.size(); i++) {
         delete servers[i];
     }
     if (logFile.is_open()) {
@@ -85,7 +85,7 @@ void LoadBalancer::log(std::string message, std::string color) {
 }
 
 void LoadBalancer::assignRequests() {
-    for (int i = 0; i < servers.size(); i++) {
+    for (long unsigned int i = 0; i < servers.size(); i++) {
         if (!servers[i]->isBusy() && !requestQueue.isEmpty()) {
             Request req = requestQueue.dequeue();
             servers[i]->assignRequest(req);
@@ -158,7 +158,7 @@ void LoadBalancer::run() {
     log("Task time range: 10 - 1000 clock cycles", GREEN);
 
     for (clockCycle = 0; clockCycle < totalTime; clockCycle++) {
-        for (int i = 0; i < servers.size(); i++) {
+        for (long unsigned int i = 0; i < servers.size(); i++) {
             if (servers[i]->isBusy()) {
                 servers[i]->increaseTime();
                 if (!servers[i]->isBusy()) {
@@ -180,7 +180,7 @@ void LoadBalancer::run() {
 void LoadBalancer::printSummary() {
     int activeServers = 0;
     int inactiveServers = 0;
-    for (int i = 0; i < servers.size(); i++) {
+    for (long unsigned int i = 0; i < servers.size(); i++) {
         if (servers[i]->isBusy())
             activeServers++;
         else
@@ -201,7 +201,7 @@ void LoadBalancer::printSummary() {
     summary += "Servers removed during run: " + std::to_string(serversRemoved) + "\n";
     summary += "======================\n";
 
-    std::cout << GREEN << summary << RESET << std::endl;
+    std::cout << GREEN << summary << std::endl;
     if (logFile.is_open()) {
         logFile << summary << std::endl;
     }

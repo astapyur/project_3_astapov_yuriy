@@ -29,7 +29,7 @@ std::string genRandomIP() {
 Request genRandomRequest() {
     std::string ipIn = genRandomIP();
     std::string ipOut = genRandomIP();
-    int processTime = 100 + rand() % (1000 - 10 + 1);   //generates number between 10 and 1000
+    int processTime = 10 + rand() % (1000 - 10 + 1);   //generates number between 10 and 1000
     char jobType = (rand() % 2 == 0) ? 'P' : 'S';
     return Request(ipIn, ipOut, processTime, jobType);
 }
