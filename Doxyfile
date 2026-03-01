@@ -1,0 +1,10 @@
+PROJECT_NAME           = "Project 3: Loadbalancer"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = .
+FILE_PATTERNS          = *.cpp *.h
+RECURSIVE              = NO
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+EXTRACT_ALL            = YES
+HAVE_DOT               = NO
+HTML_OUTPUT            = html
